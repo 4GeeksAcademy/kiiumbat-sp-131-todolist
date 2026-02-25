@@ -29,13 +29,12 @@ const Home = () => {
           <li key={index}> 
             {item}
             {/* 2. Sustituimos el <i> por el componente FontAwesomeIcon */}
-            <FontAwesomeIcon 
-              icon={faXmark} 
-              className="delete-icon"
-              onClick={() => {
-                setTodos(
-                  todos.filter((t, currentIndex) => index !== currentIndex)
-                );
+           <FontAwesomeIcon 
+            icon={faXmark} 
+            className="delete-icon"
+            style={{ color: "white", cursor: "pointer" }} // <--- Añade esto
+             onClick={() => {
+             setTodos(todos.filter((t, currentIndex) => index !== currentIndex));
               }} 
             />
           </li>
